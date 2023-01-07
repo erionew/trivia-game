@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1687ff;
+    background-image: url('/resources/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+.container--content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 1em;
+    background-color: #ffffff;
+    height: 70vh;
+    width: 85vw;
+    border-radius: 10px;
+    text-align: center;
+
+    -webkit-box-shadow: -1px 20px 0px -5px rgba(255,255,255,0.90);
+    -moz-box-shadow: -1px 20px 0px -5px rgba(255,255,255,0.90);
+    box-shadow: -1px 20px 0px -5px rgba(255,255,255,0.90);
+}
+
+.container--stats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2em;
+}
+
+.stats__question-number{
+    color: #5d5b5b;
+    letter-spacing: 2px;
+}
+
+.stats__score{
+    padding: 0.5em 3em;
+    color: #eceaea;
+    background-color: #f8a62b;
+    border-radius: 3em;
+    box-shadow: inset -10px 0px 0px -3px rgba(0, 0, 0, 0.1);
+}
+
+.container--answer-choices{
+    display: grid;
+}
+
+.answer{
+    margin: 0.5em;
+    padding: 1.25em 1em;
+    border-radius: 3em;
+    border: 1px solid #797979;
+    background-color: transparent;
+    color: #646464;
+}
+
+.logo{
+    text-transform: uppercase;
+    color: #646464;
+    font-style:italic;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .question{
+        font-size: 20px;
+    }
+    .container--content{
+        max-width: 650px;
+        height: 500px;
+    }
+    .container--answer-choices{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .answer{
+        padding: 1.5em 0;
+        margin: 1em;
+    }
+}
+
+@media only screen and (min-width: 960px){
+    .question{
+        font-size: 24px;
+    }
+    .container--content{
+        max-width: 900px;
+        padding: 2em;
+    }
+    .container--answer-choices{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .answer{
+        padding: 1.75em 0;
+        margin: 1em;
+    }
+}
