@@ -1,5 +1,8 @@
+const container = document.querySelector('.js-content-container')
 const questionNumber = document.querySelector('.js-question-number')
 const score = document.querySelector('.js-score')
+const answerChoices = document.querySelector('.js-answer-choices')
+const question = document.querySelector('.js-question')
 
 const triviaQA = [
     {
@@ -29,6 +32,14 @@ const triviaQA = [
     },
 ]
 
-document.addEventListener('load', () => {
-    
+document.addEventListener('DOMContentLoaded', () => {
+    question.textContent = triviaQA[0].question
+
+    for(let i = 0; i < triviaQA[0].answerChoices.length; i++){
+        let answer = document.createElement('button')
+        answer.textContent = triviaQA[0].answerChoices[i]
+        answer.classList.add('answer')
+        answerChoices.appendChild(answer)
+    }
+
 })
